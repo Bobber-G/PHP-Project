@@ -1,0 +1,6 @@
+.gitignore
+
+# libs/*
+# libs/bootstrap/css/*
+# libs/bootstrap/js/*
+# libs/feather_icons.js
