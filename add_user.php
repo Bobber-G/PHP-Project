@@ -8,6 +8,29 @@
 </head>
 <body>
 
+    <?php
+
+        include ('db.php');
+
+        if (isset($_POST['save'])) {
+            
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $mobile = $_POST['mobile'];
+            $password = $_POST['password'];
+        };
+        $add_sql = "INSERT INTO 'users'('name','email','password','mobile')  VALUES ('$name','$email','$password','$mobile')";
+
+        $result = mysqli_query($con,$add_sql);
+
+        if(!$result){
+            die(mysqli_error($con));
+        }else{
+            echo "Successfully connection" ;
+        }
+
+    ?>
+
     
     <div class="container">
         <div class="wrapper p-5 m-5">
